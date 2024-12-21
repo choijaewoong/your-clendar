@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.month_wrap {
+  display: inline-block;
+  width: 105mm;
+  height: 148mm;
+  padding: 1.3cm 1cm 0;
+  margin: 0 1cm 1cm 0;
+  text-align: left;
+  box-shadow: 4px 6px 6px -2px $color-box-shadow;
+  background: #fff;
+  page-break-before: always;
+
+  .month_header {
+    height: 3.2cm;
+    font-size: 76px;
+    line-height: 80px;
+    padding: 0 0.4cm;
+    color: #333;
+    text-align: center;
+  }
+  .month_num {
+    display: block;
+  }
+  .month_name {
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+    > .year {
+      display: inline-block;
+      padding-left: 8px;
+    }
+  }
+  .day_area {
+    display: grid;
+    height: 0.8cm;
+    margin-bottom: 0.2cm;
+    grid-template-columns: repeat(7, minmax(45px, 1fr));
+    font-size: 11px;
+    line-height: 0.8cm;
+    color: #333;
+    font-weight: 300;
+    .day {
+      text-align: center;
+      &:first-child {
+        color: #e03563;
+      }
+      &:last-child {
+        color: #0074bc;
+      }
+    }
+  }
+  .date_area {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(45px, 1fr));
+    font-weight: 300;
+  }
+}

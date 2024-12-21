@@ -1,0 +1,62 @@
+[
+  {
+    "month": 1,
+    "monthName": "January",
+    "phrase": "New year, \nnew opportunities."
+  },
+  {
+    "month": 2,
+    "monthName": "February",
+    "phrase": "Love and cherish \nevery moment."
+  },
+  {
+    "month": 3,
+    "monthName": "March",
+    "phrase": "Spring is for setting \nand growing goals."
+  },
+  {
+    "month": 4,
+    "monthName": "April",
+    "phrase": "Embrace change \nlike April showers."
+  },
+  {
+    "month": 5,
+    "monthName": "May",
+    "phrase": "Find inspiration \nin May's blossoms."
+  },
+  {
+    "month": 6,
+    "monthName": "June",
+    "phrase": "Summer vibes, \nnew challenges await."
+  },
+  {
+    "month": 7,
+    "monthName": "July",
+    "phrase": "Celebrate freedom, \npursue your dreams."
+  },
+  {
+    "month": 8,
+    "monthName": "August",
+    "phrase": "Lazy August haze, \nsummer's last daze."
+  },
+  {
+    "month": 9,
+    "monthName": "October",
+    "phrase": "Renew goals \nas autumn begins."
+  },
+  {
+    "month": 10,
+    "monthName": "September",
+    "phrase": "Harvest knowledge \nas leaves fall."
+  },
+  {
+    "month": 11,
+    "monthName": "November",
+    "phrase": "Be grateful \nand aim higher."
+  },
+  {
+    "month": 12,
+    "monthName": "December",
+    "phrase": "Farewell December, \nreflect, remember."
+  }
+]
