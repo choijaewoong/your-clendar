@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.controls_wrap {
+  position: sticky;
+  top: 2cm;
+  bottom: 0;
+  z-index: 30;
+  width: 10cm;
+  height: 400px;
+  padding: 20px;
+  margin: 0 1cm;
+  overflow-y: auto;
+  background: $color-white;
+  box-shadow: 4px 6px 6px -2px $color-box-shadow;
+  transition: width 0.6s ease-in-out;
+  color: $color-text;
+  .controls_inner {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    > .name {
+      font-size: 14px;
+      flex: 1;
+    }
+  }
+}

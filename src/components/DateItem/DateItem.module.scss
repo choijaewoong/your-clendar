@@ -27,4 +27,20 @@
   &.holiday {
     color: #e03563 !important;
   }
+
+  :global(.font_gowunbatang) & {
+    .name {
+      letter-spacing: -0.5px;
+    }
+  }
+  :global(.font_lineseed) & {
+    .name {
+      font-family: $font-family-pretendard;
+    }
+  }
+  :global(.type_vertical) &,
+  :global(.type_mini) & {
+    padding: 0 4px;
+    height: 1.3cm;
+  }
 }

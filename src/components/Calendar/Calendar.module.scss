@@ -5,4 +5,14 @@
   flex-wrap: wrap;
   flex: 1;
   margin-left: 1cm;
+  &:global(.font_lineseed) {
+    font-family: $font-family-lineseed;
+  }
+  &:global(.font_gowunbatang) {
+    font-family: $font-family-gowunbatang;
+  }
+  .month_multi {
+    margin: 0 1cm 1cm 0;
+    box-shadow: 4px 6px 6px -2px $color-box-shadow;
+  }
 }
