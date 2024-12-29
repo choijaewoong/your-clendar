@@ -7,3 +7,9 @@
   width: 100%;
   color: #ff5500;
 }
+
+@media print {
+  .input_wrap {
+    display: none;
+  }
+}

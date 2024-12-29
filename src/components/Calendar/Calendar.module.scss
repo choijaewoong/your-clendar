@@ -16,3 +16,13 @@
     box-shadow: 4px 6px 6px -2px $color-box-shadow;
   }
 }
+
+@media print {
+  .calendar_wrap {
+    margin: 0;
+    .month_multi {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+}

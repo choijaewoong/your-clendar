@@ -29,3 +29,18 @@
     max-width: 47.5cm;
   }
 }
+
+@media print {
+  #root {
+    min-width: auto;
+  }
+  .container {
+    > .content_top {
+      display: none;
+    }
+    > .content_body {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

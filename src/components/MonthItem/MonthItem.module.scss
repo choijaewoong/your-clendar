@@ -148,3 +148,10 @@
     font-weight: 300;
   }
 }
+
+@media print {
+  .month_wrap {
+    margin: 0;
+    box-shadow: none;
+  }
+}
