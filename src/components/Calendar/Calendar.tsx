@@ -9,17 +9,12 @@ import MonthItem from "@/components/MonthItem/MonthItem";
 import styles from "./Calendar.module.scss";
 const cx = classnames.bind(styles);
 
-type Props = {
-  type?: CalendarType;
-};
-
-const Calendar = (props: Props) => {
-  const { type } = props;
+const Calendar = () => {
   const { year, setHolidays } = useCalendarStore();
-  const { calendarFont } = useControlsStore();
+  const { calendarType, calendarFont } = useControlsStore();
   const MonthList = (
     <>
-      {type === CalendarType.mini
+      {calendarType === CalendarType.mini
         ? Array.from({ length: 6 }).map((_, idx) => (
             <div key={idx} className={cx("month_multi")}>
               <MonthItem monthInfo={monthInfoData[idx]} />
@@ -36,7 +31,11 @@ const Calendar = (props: Props) => {
     setHolidays(year);
   }, [setHolidays, year]);
 
-  return <div className={cx("calendar_wrap", calendarFont)}>{MonthList}</div>;
+  return (
+    <div className={cx("calendar_wrap", calendarFont, calendarType)}>
+      {MonthList}
+    </div>
+  );
 };
 
 export default Calendar;

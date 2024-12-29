@@ -10,9 +10,15 @@ function App() {
   return (
     <>
       <div className={classnames("container", calendarType)}>
+        <div className="content_top">
+          <div className="top_inner">
+            {/* Input Year */}
+            <InputYear />
+          </div>
+        </div>
         <div className="content_body">
           {/* Calendar */}
-          <Calendar type={calendarType} />
+          <Calendar />
           <Controls />
         </div>
       </div>

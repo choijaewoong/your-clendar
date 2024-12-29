@@ -10,6 +10,17 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  > .content_top {
+    width: 100%;
+    height: 400px;
+    background: $color-secondary;
+    > .top_inner {
+      height: 100%;
+      padding: 2cm 1cm;
+      margin: 0 auto;
+      max-width: 47.5cm;
+    }
+  }
   > .content_body {
     display: flex;
     position: relative;
