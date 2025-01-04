@@ -30,6 +30,9 @@ const MonthItem = (props: Props) => {
             ? monthInfo.month
             : monthInfo.month.toString().padStart(2, "0")}
         </em>
+        {calendarType === CalendarType.vertical && (
+          <span className={cx("month_word")}>{monthInfo.phrase}</span>
+        )}
         <span className={cx("month_name")}>
           <span className={cx("year")}>{year}</span>
           {monthInfo.monthName}
