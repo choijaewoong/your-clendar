@@ -17,8 +17,8 @@ const Calendar = () => {
       {calendarType === CalendarType.mini
         ? Array.from({ length: 6 }).map((_, idx) => (
             <div key={idx} className={cx("month_multi")}>
-              <MonthItem monthInfo={monthInfoData[idx]} />
-              <MonthItem monthInfo={monthInfoData[idx + 1]} />
+              <MonthItem monthInfo={monthInfoData[idx * 2]} />
+              <MonthItem monthInfo={monthInfoData[idx * 2 + 1]} />
             </div>
           ))
         : Array.from({ length: 12 }).map((_, idx) => (

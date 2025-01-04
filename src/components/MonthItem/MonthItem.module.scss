@@ -1,118 +1,74 @@
 @charset "UTF-8";
 
 .month_wrap {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 105mm;
   height: 148mm;
-  padding: 1.3cm 1cm 0;
+  padding: 40px 22px 1px;
   margin: 0 1cm 1cm 0;
   text-align: left;
   box-shadow: 4px 6px 6px -2px $color-box-shadow;
   background: #fff;
-  page-break-before: always;
+  // page-break-before: always;
+  :global(.type_vertical) &,
   :global(.type_mini) & {
-    display: inline-grid;
-    margin: 0;
+    flex-direction: row;
     width: 148mm;
-    height: 104.5mm;
-    padding: 0.8cm 1cm 0 0;
+    height: 105mm;
+    padding: 32px;
+    .head_area {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 128px;
+      height: auto;
+      padding: 0 0 4px 8px;
+      text-align: left;
+    }
+    .month_num {
+      font-size: 48px;
+      line-height: 52px;
+      font-weight: 800;
+    }
+    .month_name {
+      font-size: 12px;
+      line-height: 16px;
+      .year {
+        display: block;
+      }
+    }
+  }
+  :global(.type_mini) & {
+    width: 148mm;
+    height: 104.2mm;
+    margin: 0;
     box-shadow: none;
     &:nth-child(2n + 1) {
       transform: rotate(180deg);
-      page-break-before: avoid;
-    }
-    .month_header {
-      grid-column-start: 1;
-      grid-row: 1/3;
-      width: 4.3cm;
-      height: auto;
-      padding: 0;
-      text-align: center;
-      line-height: 84px;
-    }
-    .month_name {
-      display: block;
-      padding: 0;
-    }
-    .day_area {
-      grid-column-start: 2;
-      margin-bottom: 0.2cm;
-      width: 9.5cm;
-    }
-    .date_area {
-      grid-column-start: 2;
-      grid-template-rows: repeat(6, 1fr);
-      width: 9.5cm;
-      height: 8.7cm;
+      // page-break-before: avoid;
     }
   }
-  :global(.type_vertical) & {
-    display: inline-grid;
-    width: 148mm;
-    height: 104.7mm;
-    padding: 0.8cm 1cm 0 0;
-    .month_header {
-      display: flex;
-      flex-direction: column;
-      // justify-content: space-between;
-      grid-column-start: 1;
-      grid-row: 1/3;
-      width: 4.3cm;
-      height: auto;
-      padding: 0 0 1.1cm 1.2cm;
-      text-align: left;
-      font-size: 50px;
-      line-height: 58px;
-      font-weight: 800;
-    }
-    .month_word {
-      flex: 1;
-      display: block;
-      padding: 0;
-      margin-top: 0.1cm;
-      // margin-left: 0.2cm;
-      // text-indent: -0.5cm;
-      margin-left: 0.3cm;
-      text-indent: -0.3cm;
-      font-size: 10px;
-      line-height: 12px;
-      font-weight: 400;
-      white-space: pre-line;
-      opacity: 0.8;
-    }
-    .month_name {
-      display: block;
-      padding: 0;
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 400;
-      .year {
-        padding-left: 0;
-      }
-    }
-    .day_area {
-      grid-column-start: 2;
-      margin-bottom: 0.2cm;
-      width: 9.5cm;
-    }
-    .date_area {
-      grid-column-start: 2;
-      grid-template-rows: repeat(6, 1fr);
-      width: 9.5cm;
-      height: 8cm;
+  :global(.font_gowunbatang) & {
+    .month_num {
+      font-weight: bold;
     }
   }
 
-  .month_header {
-    height: 3.2cm;
-    font-size: 76px;
-    line-height: 80px;
-    padding: 0 0.4cm;
+  .head_area {
+    height: 160px;
     color: #333;
     text-align: center;
   }
+  .content_area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
   .month_num {
     display: block;
+    font-size: 80px;
+    line-height: 96px;
   }
   .month_name {
     display: block;
@@ -120,16 +76,15 @@
     line-height: 18px;
     > .year {
       display: inline-block;
-      padding-left: 8px;
+      padding-right: 8px;
     }
   }
   .day_area {
     display: grid;
-    height: 0.8cm;
-    margin-bottom: 0.2cm;
-    grid-template-columns: repeat(7, minmax(45px, 1fr));
-    font-size: 11px;
-    line-height: 0.8cm;
+    height: 40px;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 12px;
+    line-height: 28px;
     color: #333;
     font-weight: 300;
     .day {
@@ -144,8 +99,10 @@
   }
   .date_area {
     display: grid;
-    grid-template-columns: repeat(7, minmax(45px, 1fr));
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     font-weight: 300;
+    flex: 1;
   }
 }
 

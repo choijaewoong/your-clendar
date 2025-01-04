@@ -20,7 +20,7 @@ const DateItem = (props: Props) => {
     return holidays
       .filter((e) => e.date == dateTime)
       .map((e) => e.name)
-      .join(" ");
+      .join("  ");
   }, [dateTime, holidays]);
 
   const dayNum = new Date(year, month - 1, 1).getDay();

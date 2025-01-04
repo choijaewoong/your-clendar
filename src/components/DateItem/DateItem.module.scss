@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 .date_item {
-  height: 1.45cm;
-  padding: 0 1px;
   font-size: 15px;
   line-height: 25px;
   color: #333;
@@ -15,14 +13,13 @@
   }
   > .name {
     display: block;
-    // margin-top: 1px;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 9px;
+    line-height: 11px;
     color: #333;
     word-break: keep-all;
     overflow-wrap: break-word;
     letter-spacing: -0.2px;
-    transform: scale(0.9);
+    white-space: break-spaces;
   }
   &.holiday {
     color: #e03563 !important;
@@ -37,10 +34,5 @@
     .name {
       font-family: $font-family-pretendard;
     }
-  }
-  :global(.type_vertical) &,
-  :global(.type_mini) & {
-    padding: 0 4px;
-    height: 1.3cm;
   }
 }
