@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   flex: 1;
   margin-left: 1cm;
+  font-size: 10px;
   &:global(.font_lineseed) {
     font-family: $font-family-lineseed;
   }

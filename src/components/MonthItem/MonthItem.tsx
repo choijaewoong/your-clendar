@@ -26,11 +26,11 @@ const MonthItem = (props: Props) => {
     <div className={cx("month_wrap")}>
       <div className={cx("head_area")}>
         <em className={cx("month_num")}>
-          {calendarType === CalendarType.default
+          {calendarType === CalendarType.vertical
             ? monthInfo.month
             : monthInfo.month.toString().padStart(2, "0")}
         </em>
-        {calendarType === CalendarType.vertical && (
+        {calendarType === CalendarType.phrase && (
           <span className={cx("month_word")}>{monthInfo.phrase}</span>
         )}
         <span className={cx("month_name")}>

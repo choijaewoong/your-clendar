@@ -2,50 +2,73 @@
 
 .month_wrap {
   display: flex;
-  flex-direction: column;
-  width: 105mm;
-  height: 148mm;
-  padding: 40px 22px 1px;
+  flex-direction: row;
+  width: 148mm;
+  height: 105mm;
+  padding: 32px 28px 24px 32px;
   margin: 0 1cm 1cm 0;
   text-align: left;
   box-shadow: 4px 6px 6px -2px $color-box-shadow;
   background: #fff;
   // page-break-before: always;
-  :global(.type_vertical) &,
+
+  // type
+  :global(.type_vertical) & {
+    flex-direction: column;
+    width: 105mm;
+    height: 148mm;
+    padding: 40px 22px 1px;
+    .head_area {
+      height: 160px;
+      color: #333;
+      text-align: center;
+    }
+    .month_num {
+      display: block;
+      font-size: 8em;
+      line-height: 96px;
+    }
+    .month_name {
+      display: block;
+      font-size: 1.5em;
+      line-height: 18px;
+      > .year {
+        display: inline-block;
+        padding-right: 8px;
+      }
+    }
+  }
+  :global(.type_phrase) &,
   :global(.type_mini) & {
-    flex-direction: row;
-    width: 148mm;
-    height: 105mm;
-    padding: 32px;
     .head_area {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 128px;
+      width: 136px;
       height: auto;
-      padding: 0 0 4px 8px;
+      padding: 0 0 12px 12px;
       text-align: left;
     }
     .month_num {
-      font-size: 48px;
-      line-height: 52px;
+      font-size: 4.8em;
+      line-height: 64px;
       font-weight: 800;
     }
     .month_word {
       flex: 1;
       display: block;
       padding: 0;
-      margin-top: 0.1cm;
-      margin-left: 0.3cm;
-      text-indent: -0.3cm;
-      font-size: 10px;
+      // margin-top: 4px;
+      margin-left: 12px;
+      text-indent: -12px;
+      font-size: 1em;
       line-height: 12px;
       font-weight: 400;
       white-space: pre-line;
       opacity: 0.8;
     }
     .month_name {
-      font-size: 12px;
+      font-size: 1.2em;
       line-height: 16px;
       .year {
         display: block;
@@ -62,42 +85,25 @@
       // page-break-before: avoid;
     }
   }
+
+  // font
   :global(.font_gowunbatang) & {
     .month_num {
       font-weight: bold;
     }
   }
 
-  .head_area {
-    height: 160px;
-    color: #333;
-    text-align: center;
-  }
   .content_area {
     display: flex;
     flex-direction: column;
     flex: 1;
   }
-  .month_num {
-    display: block;
-    font-size: 80px;
-    line-height: 96px;
-  }
-  .month_name {
-    display: block;
-    font-size: 15px;
-    line-height: 18px;
-    > .year {
-      display: inline-block;
-      padding-right: 8px;
-    }
-  }
   .day_area {
     display: grid;
     height: 40px;
     grid-template-columns: repeat(7, 1fr);
-    font-size: 12px;
-    line-height: 28px;
+    font-size: 1.2em;
+    line-height: 40px;
     color: #333;
     font-weight: 300;
     .day {

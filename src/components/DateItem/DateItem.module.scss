@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .date_item {
-  font-size: 15px;
+  font-size: 1.5em;
   line-height: 25px;
   color: #333;
   text-align: center;
@@ -13,7 +13,7 @@
   }
   > .name {
     display: block;
-    font-size: 9px;
+    font-size: 0.6em;
     line-height: 11px;
     color: #333;
     word-break: keep-all;
@@ -26,12 +26,12 @@
   }
 
   :global(.font_gowunbatang) & {
-    .name {
+    > .name {
       letter-spacing: -0.5px;
     }
   }
   :global(.font_lineseed) & {
-    .name {
+    > .name {
       font-family: $font-family-pretendard;
     }
   }

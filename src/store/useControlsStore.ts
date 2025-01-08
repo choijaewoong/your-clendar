@@ -8,7 +8,7 @@ interface ControlsState {
   setCalendarFont: (font: FontFamilyType) => void;
 }
 const useControlsStore = create<ControlsState>((set) => ({
-  calendarType: CalendarType.vertical,
+  calendarType: CalendarType.phrase,
   calendarFont: FontFamilyType.lineseed,
   setCalendarType: (type: CalendarType) => set({ calendarType: type }),
   setCalendarFont: (font: FontFamilyType) => set({ calendarFont: font }),

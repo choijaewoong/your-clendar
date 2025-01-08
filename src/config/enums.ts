@@ -1,5 +1,5 @@
 export enum CalendarType {
-  default = "",
+  phrase = "type_phrase",
   vertical = "type_vertical",
   mini = "type_mini",
 }
