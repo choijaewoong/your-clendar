@@ -3,7 +3,7 @@
 .date_item {
   font-size: 1.5em;
   line-height: 25px;
-  color: #333;
+  color: var(--color, #333);
   text-align: center;
   time {
     display: inline-block;
@@ -25,6 +25,17 @@
     color: #e03563 !important;
   }
 
+  // type
+  :global(.type_full) & {
+    position: relative;
+    line-height: 22px;
+    time {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  // font
   :global(.font_gowunbatang) & {
     > .name {
       letter-spacing: -0.5px;

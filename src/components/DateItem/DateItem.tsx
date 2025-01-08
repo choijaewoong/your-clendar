@@ -17,30 +17,31 @@ const DateItem = (props: Props) => {
     date + 1
   ).padStart(2, "0")}`;
   const holidayName = useMemo(() => {
-    return holidays
-      .filter((e) => e.date == dateTime)
-      .map((e) => e.name)
-      .join("  ");
+    return holidays.filter((e) => e.date == dateTime).map((e) => e.name);
   }, [dateTime, holidays]);
 
   const dayNum = new Date(year, month - 1, 1).getDay();
   const dateStyle = {
     gridColumn: date === 0 && dayNum + 1,
-    color:
+    "--color":
       (date + dayNum) % 7 === 0
         ? "#e03563"
         : (date + dayNum + 1) % 7 === 0
         ? "#0074bc"
-        : undefined,
+        : "#333",
   } as CSSProperties;
 
   return (
     <div
-      className={cx("date_item", holidayName && "holiday")}
+      className={cx("date_item", holidayName.length && "holiday")}
       style={dateStyle}
     >
       <time dateTime={dateTime}>{date + 1}</time>
-      {holidayName && <span className={cx("name")}>{holidayName}</span>}
+      {holidayName.map((holiday, idx) => (
+        <span key={idx} className={cx("name")}>
+          {holiday}
+        </span>
+      ))}
     </div>
   );
 };

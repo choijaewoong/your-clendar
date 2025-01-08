@@ -87,6 +87,39 @@
   }
 
   // font
+  :global(.type_full) & {
+    flex-direction: column;
+    padding: 0 24px;
+    .head_area {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      text-align: center;
+    }
+    .month_num {
+      display: none;
+    }
+    .month_name {
+      display: flex;
+      font-size: 3.2em;
+      line-height: 42px;
+      flex-direction: column;
+      align-items: center;
+      > .year {
+        order: 1;
+        width: 36px;
+        padding: 0;
+        font-size: 0.4em;
+        line-height: 16px;
+      }
+    }
+    .day_area {
+      height: 36px;
+      line-height: 30px;
+    }
+  }
+
   :global(.font_gowunbatang) & {
     .month_num {
       font-weight: bold;
