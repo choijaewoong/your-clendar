@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import classnames from "classnames/bind";
 import DateItem from "../DateItem/DateItem";
 import useCalendarStore from "../../store/useCalendarStore";
-
+import dayInfoData from "@/data/dayInfo.json";
 import styles from "./MonthItem.module.scss";
 import { Month } from "@/config/types";
 import useControlsStore from "@/store/useControlsStore";
@@ -40,13 +40,9 @@ const MonthItem = (props: Props) => {
       </div>
       <div className={cx("content_area")}>
         <div className={cx("day_area")}>
-          <span className={cx("day")}>Sun</span>
-          <span className={cx("day")}>Mon</span>
-          <span className={cx("day")}>Tue</span>
-          <span className={cx("day")}>Wed</span>
-          <span className={cx("day")}>Thu</span>
-          <span className={cx("day")}>Fri</span>
-          <span className={cx("day")}>Sat</span>
+          {Array.from({ length: 7 }).map((_, idx) => (
+            <span className={cx("day")}>{dayInfoData[idx].day}</span>
+          ))}
         </div>
         <div className={cx("date_area")}>
           {[...Array(lastDate)].map((_, date) => (
