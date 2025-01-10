@@ -5,6 +5,18 @@
   line-height: 25px;
   color: var(--color, #333);
   text-align: center;
+  &.opaque {
+    time,
+    > .name {
+      opacity: 0.3;
+    }
+  }
+  &.hide {
+    time,
+    > .name {
+      display: none;
+    }
+  }
   time {
     display: inline-block;
     width: 25px;

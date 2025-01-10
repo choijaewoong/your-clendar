@@ -15,12 +15,17 @@ type Props = {
 
 const MonthItem = (props: Props) => {
   const { monthInfo } = props;
+
   const { year } = useCalendarStore();
   const { calendarType } = useControlsStore();
+
+  const prevDay = new Date(year, monthInfo.month - 1, 1).getDay();
+  const prevDate = new Date(year, monthInfo.month - 1, 0).getDate();
   const lastDate = useMemo(
     () => new Date(year, monthInfo.month, 0).getDate(),
     [year, monthInfo]
   );
+  const nextDay = (42 - (lastDate + prevDay)) % 7;
 
   return (
     <div className={cx("month_wrap")}>
@@ -45,8 +50,27 @@ const MonthItem = (props: Props) => {
           ))}
         </div>
         <div className={cx("date_area")}>
+          {prevDay !== 0 && (
+            <>
+              {[...Array(prevDay)].map((_, date) => (
+                <DateItem
+                  date={prevDate - prevDay + date}
+                  month={monthInfo.month - 1}
+                  className="hide"
+                />
+              ))}
+            </>
+          )}
           {[...Array(lastDate)].map((_, date) => (
             <DateItem key={date} date={date} month={monthInfo.month} />
+          ))}
+          {[...Array(nextDay)].map((_, date) => (
+            <DateItem
+              key={date}
+              date={date}
+              month={monthInfo.month + 1}
+              className="hide"
+            />
           ))}
         </div>
       </div>

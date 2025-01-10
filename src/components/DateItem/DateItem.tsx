@@ -7,10 +7,11 @@ const cx = classnames.bind(styles);
 type Props = {
   month: number;
   date: number;
+  className?: string;
 };
 
 const DateItem = (props: Props) => {
-  const { month, date } = props;
+  const { month, date, className } = props;
   const { year, holidays } = useCalendarStore();
 
   const dateTime = `${year}-${String(month).padStart(2, "0")}-${String(
@@ -33,7 +34,7 @@ const DateItem = (props: Props) => {
 
   return (
     <div
-      className={cx("date_item", holidayName.length && "holiday")}
+      className={cx("date_item", holidayName.length && "holiday", className)}
       style={dateStyle}
     >
       <time dateTime={dateTime}>{date + 1}</time>
