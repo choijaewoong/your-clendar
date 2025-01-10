@@ -12,6 +12,10 @@
   &:global(.font_gowunbatang) {
     font-family: $font-family-gowunbatang;
   }
+  &:global(.font_momtodaughter) {
+    font-family: $font-family-momtodaughter;
+    font-size: 15px;
+  }
   .month_multi {
     margin: 0 1cm 1cm 0;
     box-shadow: 4px 6px 6px -2px $color-box-shadow;

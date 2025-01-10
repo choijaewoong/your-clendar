@@ -17,7 +17,7 @@
     flex-direction: column;
     width: 105mm;
     height: 148mm;
-    padding: 40px 22px 1px;
+    padding: 40px 18px 0;
     .head_area {
       height: 160px;
       color: #333;
@@ -27,6 +27,7 @@
       display: block;
       font-size: 8em;
       line-height: 96px;
+      font-weight: bold;
     }
     .month_name {
       display: block;
@@ -52,7 +53,7 @@
     .month_num {
       font-size: 4.8em;
       line-height: 64px;
-      font-weight: 800;
+      font-weight: bold;
     }
     .month_word {
       flex: 1;
@@ -85,8 +86,6 @@
       // page-break-before: avoid;
     }
   }
-
-  // font
   :global(.type_full) & {
     flex-direction: column;
     padding: 0 24px;
@@ -120,9 +119,28 @@
     }
   }
 
-  :global(.font_gowunbatang) & {
+  // font
+  :global(.font_momtodaughter) & {
+    .month_word {
+      line-height: 14px;
+    }
+  }
+  :global(.font_lineseed.type_vertical) & {
     .month_num {
-      font-weight: bold;
+      font-weight: normal;
+    }
+  }
+  :global(.font_momtodaughter.type_phrase) & {
+    .month_num {
+      font-size: 5.2em;
+    }
+  }
+  :global(.font_momtodaughter.type_full) & {
+    .head_area {
+      padding: 8px 0 12px;
+    }
+    .month_name {
+      line-height: 46px;
     }
   }
 

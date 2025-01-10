@@ -8,4 +8,5 @@ export enum CalendarType {
 export enum FontFamilyType {
   lineseed = "font_lineseed",
   gowunbatang = "font_gowunbatang",
+  momtodaughter = "font_momtodaughter",
 }

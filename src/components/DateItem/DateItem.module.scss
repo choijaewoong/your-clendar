@@ -46,4 +46,9 @@
       font-family: $font-family-pretendard;
     }
   }
+  :global(.font_momtodaughter) & {
+    > .name {
+      line-height: 12px;
+    }
+  }
 }
