@@ -33,6 +33,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "GangwonEdu";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 $font-family-lineseed: (
   LineSeed,
@@ -72,6 +79,15 @@ $font-family-gowunbatang-bold: (
 );
 $font-family-momtodaughter: (
   MomToDaughter,
+  -apple-system,
+  BlinkMacSystemFont,
+  system-ui,
+  Roboto,
+  arial,
+  sans-serif
+);
+$font-family-gangwonedu: (
+  GangwonEdu,
   -apple-system,
   BlinkMacSystemFont,
   system-ui,

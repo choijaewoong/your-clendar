@@ -63,4 +63,9 @@
       line-height: 12px;
     }
   }
+  :global(.font_gangwonedu) & {
+    > .name {
+      letter-spacing: -0.3px;
+    }
+  }
 }

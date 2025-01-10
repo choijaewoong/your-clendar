@@ -16,6 +16,10 @@
     font-family: $font-family-momtodaughter;
     font-size: 15px;
   }
+  &:global(.font_gangwonedu) {
+    font-family: $font-family-gangwonedu;
+    font-size: 11.6px;
+  }
   .month_multi {
     margin: 0 1cm 1cm 0;
     box-shadow: 4px 6px 6px -2px $color-box-shadow;
