@@ -3,42 +3,59 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard-dynamic-subset.css");
 
 @font-face {
-  font-family: "GowunBatang-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
-    format("woff");
-  font-weight: normal;
+  font-family: "LineSeed";
+  src: url(../../assets/fonts/lineseed_en_rg.woff2) format("woff2");
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "GowunBatang-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040,
+    U+005B-0060, U+007B-007E;
   font-display: swap;
 }
 @font-face {
   font-family: "LineSeed";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2")
-    format("woff2");
-  font-weight: normal;
+  src: url(../../assets/fonts/lineseed_kr_rg.woff2) format("woff2");
   font-style: normal;
+  font-weight: 400;
+  unicode-range: U+AC00-D7A3;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GowunBatang";
+  src: url(../../assets/fonts/gowunbatang_rg.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: "MomToDaughter";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_08@1.0/mom_to_daughter.woff")
-    format("woff");
-  font-weight: normal;
+  font-family: "GowunBatang";
+  src: url(../../assets/fonts/gowunbatang_bd.woff2) format("woff2");
   font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MomToDaughter";
+  src: url(../../assets/fonts/momtodaughter.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GangwonEdu";
+  src: url(../../assets/fonts/gangwonedu_rg.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: "GangwonEdu";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff")
-    format("woff");
-  font-weight: normal;
+  src: url(../../assets/fonts/gangwonedu_bd.woff2) format("woff2");
   font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
 
 $font-family-lineseed: (
@@ -60,16 +77,7 @@ $font-family-pretendard: (
   sans-serif
 );
 $font-family-gowunbatang: (
-  GowunBatang-Regular,
-  -apple-system,
-  BlinkMacSystemFont,
-  system-ui,
-  Roboto,
-  arial,
-  sans-serif
-);
-$font-family-gowunbatang-bold: (
-  GowunBatang-Bold,
+  GowunBatang,
   -apple-system,
   BlinkMacSystemFont,
   system-ui,
