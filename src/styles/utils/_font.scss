@@ -58,6 +58,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "HanComMalang";
+  src: url(../../assets/fonts/hancom_malang_rg.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HanComMalang";
+  src: url(../../assets/fonts/hancom_malang_bd.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 $font-family-lineseed: (
   LineSeed,
   -apple-system,
@@ -96,6 +112,16 @@ $font-family-momtodaughter: (
 );
 $font-family-gangwonedu: (
   GangwonEdu,
+  -apple-system,
+  BlinkMacSystemFont,
+  system-ui,
+  Roboto,
+  arial,
+  sans-serif
+);
+
+$font-family-hancommalang: (
+  HanComMalang,
   -apple-system,
   BlinkMacSystemFont,
   system-ui,

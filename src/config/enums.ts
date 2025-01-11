@@ -10,4 +10,5 @@ export enum FontFamilyType {
   gowunbatang = "font_gowunbatang",
   momtodaughter = "font_momtodaughter",
   gangwonedu = "font_gangwonedu",
+  hancommalang = "font_hancommalang",
 }

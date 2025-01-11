@@ -20,6 +20,9 @@
     font-family: $font-family-gangwonedu;
     font-size: 11.6px;
   }
+  &:global(.font_hancommalang) {
+    font-family: $font-family-hancommalang;
+  }
   .month_multi {
     margin: 0 1cm 1cm 0;
     box-shadow: 4px 6px 6px -2px $color-box-shadow;
